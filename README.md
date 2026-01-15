@@ -35,3 +35,121 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 #
+
+Controle de Estoque — Full Stack (Online)
+
+🔗 Site em produção:
+👉 https://online-stock.vercel.app/
+
+Sistema de controle de estoque desenvolvido em Full Stack, com frontend e backend integrados em Next.js, utilizando Server Actions e banco de dados PostgreSQL (Neon), com deploy na Vercel.
+
+- Tecnologias Utilizadas
+🖥️ Frontend
+
+Next.js (App Router)
+
+React
+
+TypeScript
+
+CSS (Dark UI)
+
+⚙️ Backend
+
+Next.js Server Actions
+
+Node.js (runtime serverless da Vercel)
+
+💾 Banco de Dados
+
+PostgreSQL (Neon – Serverless)
+
+☁️ Deploy
+
+Vercel
+
+- Funcionalidades
+
+- Listar produtos
+
+- Cadastrar produtos
+
+- Excluir produtos
+
+💾 Persistência em banco PostgreSQL online
+
+⚡ Operações via Server Actions (sem API REST)
+
+📁 Estrutura do Projeto
+Estoque Web/
+│
+├── app/
+│   ├── actions/
+│   │   └── products.ts
+│   ├── lib/
+│   │   └── db.ts
+│   └── page.tsx
+│
+├── public/
+├── package.json
+├── tsconfig.json
+└── next.config.js
+
+▶️ Como Executar Localmente
+1️⃣ Clonar o repositório
+git clone <url-do-repositorio>
+cd Estoque-Web
+
+2️⃣ Instalar dependências
+npm install
+
+3️⃣ Configurar variáveis de ambiente
+
+Crie um arquivo:
+
+.env.local
+
+
+Com:
+
+DATABASE_URL=postgresql://USER:PASSWORD@HOST/DATABASE?sslmode=require
+
+4️⃣ Rodar o projeto
+npm run dev
+
+
+Acesse:
+
+👉 http://localhost:3000
+
+🗃️ Banco de Dados
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  type TEXT,
+  description TEXT,
+  quantity INTEGER NOT NULL
+);
+
+
+Driver utilizado:
+
+@neondatabase/serverless
+
+- Ideias Futuras
+
+- Edição de produtos
+
+- Busca e filtros
+
+📊 Dashboard
+
+🖼 Upload de imagens
+
+🔐 Autenticação
+
+👨‍💻 Autor
+
+Desenvolvido por Douglas R. S.
+📱 Google Play Developer:
+https://play.google.com/store/apps/developer?id=Douglas+R.+S.+Developer
